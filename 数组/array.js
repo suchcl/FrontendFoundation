@@ -8,7 +8,7 @@ const user = [
         name: "Hanmeimei"
     }
 ];
-
+// forEach会改变原数组，无返回值
 let newUser = user.forEach(item => {
     // console.log(item.name);
     // return item.name;
