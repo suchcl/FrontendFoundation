@@ -1,6 +1,5 @@
-function greeter(person) {
-    return "hello ".concat(person);
+function identify(arg) {
+    return arg;
 }
-var user = "Jane user";
-// document.body.innerHTML = greeter(user);
-document.querySelector("#inn").innerHTML = greeter(user);
+console.log(identify(11)); // 使用了类型推导
+console.log(identify("23"));
