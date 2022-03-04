@@ -84,3 +84,4 @@ function fn(data = []) {
     return res
 }
 console.log(fn(dataA));
+
