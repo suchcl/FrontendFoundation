@@ -63,20 +63,20 @@
 // new new Foo().getName(); // 3
 
 
-const promise = new Promise((resolve, reject) => {
-    console.log(1);
-    setTimeout(() => {
-        console.log("timerStart");
-        resolve("success");
-        reject("failed");
-        console.log("timerEnd");
-    }, 0);
-    console.log(2);
-});
-promise.then((res) => {
-    console.log(res);
-});
-console.log(4);
-promise.catch((err) => {
-    console.log(err);
-})
+// const promise = new Promise((resolve, reject) => {
+//     console.log(1);
+//     setTimeout(() => {
+//         console.log("timerStart");
+//         resolve("success");
+//         reject("failed");
+//         console.log("timerEnd");
+//     }, 0);
+//     console.log(2);
+// });
+// promise.then((res) => {
+//     console.log(res);
+// });
+// console.log(4);
+// promise.catch((err) => {
+//     console.log(err);
+// })
