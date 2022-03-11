@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+ul,li,ol {
+    list-style: none;
+}
+.box{
+    width: 200px;
+    margin: 20px auto 0;
+    background-color: beige;
+}
+.txt{
+    height: 32px;
+    line-height: 32px;
+    padding: 0 20px;
+    /* 下面是必要控制属性:不能换行、省略号显示、强制隐藏 */
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.txt2 {
+    width: 260px;
+    /* height: 64px; */
+    overflow: hidden;
+    /* 下面是必要属性 */
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 5;
+    line-height: 32px;
+    -webkit-box-orient: vertical;
+}
