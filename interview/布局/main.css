@@ -31,3 +31,17 @@ ul,li,ol {
     line-height: 32px;
     -webkit-box-orient: vertical;
 }
+.txt3{
+    position: relative;
+    line-height: 1.4em;
+    height: 4.2em;
+    overflow: hidden;
+}
+.txt3::after{
+content:"...";
+font-weight: bold;
+position: absolute;
+bottom: 0;
+right:0;
+padding: 0 20px 1px 45px;
+}
