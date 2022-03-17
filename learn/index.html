@@ -13,14 +13,34 @@
         </ol>
     </div>
     <script>
-        function timerCallback2(){
-            console.log(2);
-        }
-        function timerCallback(){
+        function executor(resolve,reject){
+            let rand = Math.rand();
             console.log(1);
-            setTimeout(timerCallback2,0)
+            console.log(rand);
+            if(rand > 0.5){
+                resolve();
+            }else{
+                reject();
+            }
         }
-        setTimeout(timerCallback,0);
+        var p0 = new Promise(executor);
+        var p1 = p0.then((value) => {
+            console.log("successed-1");
+            return new Promise(executor);
+        })
+        var p3 = p1.then((value) => {
+            console.log("successed-2");
+            return new Promise(executor);
+        });
+        var p4 = p3.then((value) => {
+            console.log("successed-3");
+            return new Promise(executor);
+        });
+        p4.catch((error) => {
+            console.log("error");
+        });
+        console.log(2);
+        // 最终输出2、error
     </script>
 </body>
 </html>
