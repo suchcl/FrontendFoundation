@@ -57,3 +57,26 @@ let p3 = x2.then(value => {
 p3.catch(error => {
     console.log(error);
 });
+
+const api = "https://www.xxx.com";
+const api2 = "https://www.xxxx.com";
+fetch(api).then((res) => {
+    console.log(res);
+    return fetch(api2)
+}).then(res => {
+    console.log(res);
+}).catch(err => {
+    console.log(err);
+})
+
+
+async function getData() {
+    try {
+        let res = await fetch(api);
+        console.log(res);
+        let res2 = await fetch(api2);
+        console.log(res2);
+    } catch (err) {
+        console.log(err);
+    }
+}
