@@ -31,9 +31,21 @@
 
 // export { person };
 
-function addX(x, y) {
-    return x + y;
+// function addX(x, y) {
+//     return x + y;
+// }
+// export {
+//     addX
+// };
+
+function sayHello() {
+    return "Hello";
 }
+
+function play() {
+    return "play football!";
+}
+
 export {
-    addX
+    sayHello, play
 };
