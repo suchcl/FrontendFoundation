@@ -1,11 +1,8 @@
 #include <stdio.h>
-
-int main()
+int main(void)
 {
-    int p;
-    int p1 = 2;
-    int p2 = 3;
-    p = (p1 != p2);
-    printf("%d\n",p);
+    char x,y;
+    scanf("x=%c,y=%c",&x,&y);
+    printf("x=%c,y=%c",x,y);
     return 0;
 }
