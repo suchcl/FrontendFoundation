@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+        }
+
+        .box {
+            width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+    <link rel="stylesheet" href="./jquery.dataTables.min.css">
+    <link rel="stylesheet" href="./fixedColumns.dataTables.min.css">
+</head>
+
+<body>
+    <div class="box">
+        <table id="example" class="stripe row-border order-column" style="width:100%">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th width="300">First name</th>
+                    <th width="300">Last name</th>
+                    <th width="300">Position</th>
+                    <th width="300">Office</th>
+                    <th width="300">Age</th>
+                    <th width="300">Start date</th>
+                    <th width="300">Salary</th>
+                    <th width="300">Extn.</th>
+                    <th width="300">E-mail</th>
+                    <th width="300">邮箱</th>
+                    <th width="300">姓名</th>
+                    <th width="300">性别</th>
+                    <th width="300">年龄</th>
+                    <th width="300">年纪</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Tiger</td>
+                    <td>Nixon</td>
+                    <td>System Architect</td>
+                    <td>Edinburgh</td>
+                    <td>61</td>
+                    <td>2011/04/25</td>
+                    <td>$320,800</td>
+                    <td>5421</td>
+                    <td>t.nixon@datatables.net</td>
+                    <td>asfd</td>
+                    <td>asd</td>
+                    <td>ad</td>
+                    <td>asd</td>
+                    <td>adf</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Garrett</td>
+                    <td>Winters</td>
+                    <td>Accountant</td>
+                    <td>Tokyo</td>
+                    <td>63</td>
+                    <td>2011/07/25</td>
+                    <td>$170,750</td>
+                    <td>8422</td>
+                    <td>g.winters@datatables.net</td>
+                    <td>asfd</td>
+                    <td>asd</td>
+                    <td>ad</td>
+                    <td>asd</td>
+                    <td>adf</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="./jquery-3.5.1.js"></script>
+    <script src="./jquery.dataTables.min.js"></script>
+    <script src="./dataTables.fixedColumns.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var table = $('#example').DataTable({
+                // scrollY: "200px",
+                scrollX: true,
+                scrollCollapse: true,
+                paging: false,
+                fixedColumns: true
+            });
+        });
+    </script>
+</body>
+
+</html>
