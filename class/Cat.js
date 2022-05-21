@@ -28,3 +28,9 @@ console.log([o, n, s, b, d, arg, r, f, arr, e].map(v => Object.prototype.toStrin
 
 var date = new Date();
 console.log(Object.prototype.toString.call(date));
+
+var o = {
+    [Symbol.toStringTag]: "MyObject"
+};
+console.log(o + "");
+console.log(Object.prototype.toString.call(this));
