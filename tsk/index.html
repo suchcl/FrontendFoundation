@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+    <div id="box">
+        外部的模块
+        <div id="box2">
+            内部的模块
+        </div>
+    </div>
+    <script>
+        var box = document.querySelector("#box");
+        var innerBox = document.querySelector("#box2");
+
+        box.onmouseenter = function (e) {
+            // 父容器宽度
+            var wrapperBoxWidth = box.offsetWidth;
+            // 父容器高度
+            var wrapperBoxHeight = box.offsetHeight;
+            console.log("wrapperBoxWidth:", wrapperBoxWidth);
+            console.log("wrapperBoxHeight:", wrapperBoxHeight);
+
+            // 获取弹层的宽度
+            var innerBoxWidth = innerBox.offsetWidth;
+            // 获取弹层的高度
+            var innerBoxHeight = innerBox.offsetHeight;
+            console.log("innerBoxWidth:", innerBoxWidth);
+            console.log("innerBoxHeight:", innerBoxHeight);
+
+            // 获取弹层距离父元素左侧的距离
+            var innerBoxLeft = innerBox.offsetLeft;
+            // 获取弹层距离父元素顶部的距离
+            var innerBoxTop = innerBox.offsetTop;
+            console.log("innerBoxLeft:", innerBoxLeft);
+            console.log("innerBoxTop:", innerBoxTop);
+
+            innerBox.style.visibility = "visible";
+
+            // 如果弹层宽度+距离左侧的宽度 > 父容器宽度，则右侧溢出了
+            if (innerBoxWidth + innerBoxLeft > wrapperBoxWidth) {
+                innerBox.style.left = "auto";
+                innerBox.style.right = "10px";
+            }
+
+            // 如果弹层高度 + 距离顶部距离 > 父容器高度，则底部溢出了
+            if (innerBoxHeight + innerBoxTop > wrapperBoxHeight) {
+                innerBox.style.top = "auto";
+                innerBox.style.bottom = "10px";
+            }
+        }
+
+        box.onmouseleave = function (e) {
+            innerBox.style.visibility = "hidden";
+        }
+    </script>
+</body>
+
+</html>

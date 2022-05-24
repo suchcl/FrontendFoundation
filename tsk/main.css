@@ -1,0 +1,17 @@
+#box{
+    width: 500px;
+    height: 500px;
+    background-color: #0a67fb;
+    margin: 100px auto;
+    position: relative;
+}
+
+#box2 {
+    width: 200px;
+    height: 200px;
+    background-color: #00F7DE;
+    position: absolute;
+    top: 50px;
+    left: 320px;
+    visibility: hidden;
+}
