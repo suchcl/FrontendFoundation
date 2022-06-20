@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iframe</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wraper {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #frame {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wraper">
+        <iframe src="https://www.baidu.com" frameborder="0" id="frame"></iframe>
+    </div>
+    <script>
+        let ifm = document.querySelector("#frame").contentWindow;
+        console.log(ifm);
+        let header = ifm.document.querySelector("#header");
+        console.log(header);
+    </script>
+</body>
+
+</html>
