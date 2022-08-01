@@ -65,3 +65,7 @@ console.log(a.duration); // 50
 let b = a.speed ?? 20;
 console.log(a.speed); // 10
 console.log(b);
+
+const str = 'The quick brown fox jumps over the lazy dog.';
+const words = str.split(" ");
+console.log(words);

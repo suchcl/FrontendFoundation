@@ -47,3 +47,6 @@ console.log(a.duration); // 50
 var b = (_c = a.speed) !== null && _c !== void 0 ? _c : 20;
 console.log(a.speed); // 10
 console.log(b);
+var str = 'The quick brown fox jumps over the lazy dog.';
+var words = str.split(" ");
+console.log(words);
