@@ -16,3 +16,7 @@ let newUser = user.forEach(item => {
     console.log(item.name);
 });
 console.log(user);
+
+const str = 'The quick brown fox jumps over the lazy dog.';
+const newStr = str.split(' ');
+console.log(newStr);
