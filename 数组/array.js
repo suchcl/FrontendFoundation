@@ -20,3 +20,10 @@ console.log(user);
 const str = 'The quick brown fox jumps over the lazy dog.';
 const newStr = str.split(' ');
 console.log(newStr);
+
+const str2 = '楼盘不熟悉,楼盘信息虚假,不满足需求，房产知识欠缺,沟通不到位，楼盘无讲解';
+// console.log(str2.replace(/，/ig,','));
+// const newStr2 = str2.split(',');
+console.log(str2.split(","));
+const newStr2 = str2.replace(/，/ig,',').split(',');
+console.log(newStr2);
